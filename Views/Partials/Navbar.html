@@ -1,0 +1,28 @@
+﻿<nav class="navbar navbar-inverse" style="background-color: #d9534f">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button"
+                    class="navbar-toggle"
+                    data-toggle="collapse"
+                    data-target="#navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" style="color: white">Bootstrap labb1</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav">
+                <li ng-class="{active: $route.current.activeTab == 'Home'}">
+                    <a href="/" style="color: white;font-size: 20px;">Home</a>
+                </li>
+                <li ng-class="{active: $route.current.activeTab == 'Items'}">
+                    <a href="/Items" style="color: white;font-size: 20px;">Items</a>
+                </li>
+                <li ng-class="{active: $route.current.activeTab == 'About'}">
+                    <a href="/About" style="color: white;font-size: 20px;">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

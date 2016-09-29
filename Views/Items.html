@@ -1,0 +1,28 @@
+﻿<div class="col-md-12">
+    <div class="col-md-12">
+        <h1 ng-bind="title" style="background-color:aquamarine"></h1>
+    </div>
+    <!--Add item-->
+        <div class="col-md-12">
+        <button type="button" 
+                class="btn btn-default" 
+                aria-label="Left Align" 
+                data-toggle="modal"
+                data-target="#newItemModal"
+                style="position: relative;
+                       left: 97%;">
+            <span class="glyphicon glyphicon-plus-sign"></span>
+        </button>
+    </div>
+
+    <div class="col-md-3" 
+         ng-repeat="item in items track by $index">
+        <h1 style="width: 38%;font-size: 40px;color: #d9534f;text-decoration: underline;text-transform: capitalize;" ng-bind="item.name"></h1>
+        <p style="font-size: 25px;width: 38%;color: #000000;text-transform: capitalize;" ng-bind="item.description"></p>
+        <button class="btn btn-danger"  ng-click="remove($index)">Remove</button>
+    </div>
+
+</div>
+
+<div ng-include="'Views/Partials/NewItemModal.html'"></div>
+
